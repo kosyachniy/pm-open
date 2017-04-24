@@ -8,11 +8,11 @@ if (!($page>=1)) $page=1;
 
 if ($item)
 	{
-	$list=mysqli_query($db,"SELECT * FROM `note` WHERE `id`='$a'");
+	$list=mysqli_query($db,"SELECT * FROM `note` WHERE `id`='$item'");
 	while($note=mysqli_fetch_array($list))
 		{
 		start($note['nam'].' - PM-Open','?i='.$item,'');
-		print '<center><h1>'.$d['nam'].'</h1></center><img src="load/img/'.$d['id'].'.jpg"><br><br>'.nl2br($d['dop']).'<hr>'.nl2br($d['cont']);
+		print '<center><h1>'.$note['nam'].'</h1></center><img src="load/img/'.$note['id'].'.jpg"><br><br>'.nl2br($note['cont']);
 		}
 	}
   else
@@ -22,6 +22,7 @@ if ($item)
 	$list=mysqli_query($db,"SELECT * FROM `note` ORDER BY `id` DESC LIMIT '$start',10");
 	while($note=mysqli_fetch_array($list))
 ?>
+<div class="c3">
 <div class="c9"><div><center><div class="c1">
 	<div>Выпуски
 		<div>123</div>
@@ -43,9 +44,7 @@ if ($item)
 	</div><div style="display: none;" class="c4">
 </div></div>
 </center></div></div>
-<div class="c3">
 <?php
-//Этот блок будет заменён на 4 наиболее популярные статьи
 $list=mysqli_query($db,"SELECT * FROM `note` WHERE `rating`>=50 ORDER BY `id` DESC LIMIT 4");
 while($note=mysqli_fetch_array($list))
 	print '<a href="?i='.$note['id'].'"><div style="background-image: url(load/img/'.$note['id'].'.jpg);"><div>'.$note['nam'].'</div></div>';
@@ -59,6 +58,6 @@ while($d=mysqli_fetch_array($c))
 	print '<a href="?i='.$d['id'].'"><div style="background-image: url(load/img/'.$d['id'].'.jpg);"><div><table><tr><td>'.$d['nam'].'<br>'.$d['tags'].'</td><td class="c6">&nbsp;'.$d['rating'].'</td></tr></table></div></div></a>';
 	}
 print'</div>';
-}
+	}
 finish();
 ?>
