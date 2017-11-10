@@ -33,5 +33,5 @@ start('Аккаунт','login','Логин, авторизация, пароль
 <?php
 include ('error.php');
 print '</div></div>';
-finish();
+include('../sys/finish.tpl');
 ?>                                                                                

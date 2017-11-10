@@ -1,8 +1,8 @@
 </div></center>
 		<div class="a2">
 			<div class="a3">
-			<a href="/?i=0"><img src="/sys/logo.png"></a>
-			<a href="/?i=0"><div>Читать</div></a>
+			<a href="/"><img src="/sys/logo3.png"></a>
+			<a href="/"><div>Читать</div></a>
 			<a href="/write"><div>Написать</div></a>
 			<a href="/about/"><div>О нас</div></a>
 			</div><div class="a4"><form action="/sys/search.php" method="post" class="a8"><input placeholder="Поиск" name="search"></form><div>

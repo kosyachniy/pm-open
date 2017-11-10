@@ -30,27 +30,27 @@ if ($item)
 	while ($note = mysqli_fetch_array($list))
 		{
 		if (strlen($note['nam']))
-			print '<div>'.$note['nam'].'</div>';
+			print '<a href="releases/?i='.$note['id'].'"><div>'.$note['nam'].'</div></a>';
 		else
-			print '<div>Выпуск №'.$note['id'].' ('.$note['time'].')</div>';
+			print '<a href="releases/?i='.$note['id'].'"><div>Выпуск №'.$note['id'].' ('.$note['time'].')</div></a>';
 		}
 ?>
 	</div><div>Авторы
 <?php
 	$list = mysqli_query($db, "SELECT * FROM `auth` ORDER BY `id` DESC");
 	while ($note = mysqli_fetch_array($list))
-		print '<div>'.$note['nam'].' '.$note['fam'].'</div>';
+		print '<a href="authors/?i='.$note['id'].'"><div>'.$note['nam'].' '.$note['fam'].'</div></a>';
 ?>
 	</div><div>Темы
 <?php
 	$list = mysqli_query($db, "SELECT * FROM `theme` ORDER BY `id` DESC");
 	while ($note = mysqli_fetch_array($list))
-		print '<div>'.$note['nam'].'</div>';
+		print '<a href="themes/?i='.$note['id'].'"><div>'.$note['nam'].'</div></a>';
 ?>
 	</div><div>Года
-		<div>Раздел в разработке</div>
+		<a><div>Раздел в разработке</div></a>
 	</div><div>Праздники
-		<div>Раздел в разработке</div>
+		<a><div>Раздел в разработке</div></a>
 	</div>
 </div>
 <!--
@@ -64,9 +64,9 @@ if ($item)
 !-->
 </center></div></div>
 <?php
-$list=mysqli_query($db,"SELECT * FROM `note` WHERE `rating`>=50 ORDER BY `id` DESC LIMIT 4");
-while($note=mysqli_fetch_array($list))
-	print '<a href="?i='.$note['id'].'"><div style="background-image: url(load/img/'.$note['id'].'.jpg);"><div>'.$note['nam'].'</div></div>';
+$list = mysqli_query($db, "SELECT * FROM `note` WHERE `rating` >= 50 ORDER BY `id` DESC LIMIT 4");
+while ($note = mysqli_fetch_array($list))
+	print '<a href="?i='.$note['id'].'"><div style="background-image: url(load/img/'.$note['id'].'.jpg);" class="c10"><div>'.$note['nam'].'</div></div>';
 ?>
 </div>
 <div class="c5">
@@ -78,5 +78,5 @@ while($d=mysqli_fetch_array($c))
 	}
 print'</div>';
 	}
-finish();
+include('sys/finish.tpl');
 ?>

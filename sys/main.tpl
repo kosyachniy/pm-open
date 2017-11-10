@@ -18,3 +18,4 @@
 	    location.href='/m/'<?=$href?>;
 	</script>
 		<center><div class="a1">
+<!-- #$d=rand(1,mb_strstr(scandir($_SERVER['DOCUMENT_ROOT'].'/sys/bck/', 1)[0],'.',true)); !-->
