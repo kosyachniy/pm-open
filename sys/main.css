@@ -1,10 +1,17 @@
 @charset "utf8";
 
+/*
+8143: Myriad Pro Regular
+8145: Myriad Pro SemiBold
+Arial
+*/
+@font-face {font-family: Myriad; src: url(8143.otf);}
+
 body, div, table, p, form, input {margin: 0; padding: 0; border: 0;}
 div, table, form, input {border: 0; display: inline-block;}
 div, a, table, tr, td {vertical-align: top;}
 
-body {font: 17px Arial; zoom: 1; background: #fff;}
+body {font: 18px Myriad; zoom: 1; background: #fff;}
 a, a:visited, a:hover {text-decoration: none; color: #000;}
 input, textarea {font-size: 20px; border-radius: 15px;}
 input[type="submit"] {background-color: #c0c0c0; border: 1px solid #c0c0c0; padding: 7px; cursor: pointer;}
@@ -31,6 +38,19 @@ textarea:focus, input:focus {outline: none;}
 .a7 {width: 65%; padding: 5px;}
 .a7 p {padding: 8px 10px 5px 15px;}
 .a1 > img {width: 96%; margin: 0 2% 0 2%;}
+
+.column {
+  -webkit-columns: 200px 3;
+  -moz-columns: 200px 3;
+  columns: 200px 3;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  -webkit-column-rule: 1px solid #ccc;
+  -moz-column-rule: 1px solid #ccc;
+  column-rule: 1px solid #ccc;
+  text-align: justify;
+}
 
 .b1 > div {width: 49%; display: inline-block;}
 .b1 div div {width: 100%; text-align: center; padding: 30px 0 20px 0; font-size: 25px;}

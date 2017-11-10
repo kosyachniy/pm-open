@@ -12,7 +12,7 @@ if ($item)
 	while($note=mysqli_fetch_array($list))
 		{
 		start($note['nam'].' - PM-Open','?i='.$item,'');
-		print '<center><h1>'.$note['nam'].'</h1></center><img src="load/img/'.$note['id'].'.jpg"><br><br>'.nl2br($note['cont']);
+		print '<center><h1>'.$note['nam'].'</h1></center><img src="load/img/'.$note['id'].'.jpg"><br><br><div class="column">'.nl2br($note['cont']).'</div>';
 		}
 	}
   else
@@ -37,7 +37,7 @@ if ($item)
 ?>
 	</div><div>Авторы
 <?php
-	$list = mysqli_query($db, "SELECT * FROM `auth` ORDER BY `id` DESC");
+	$list = mysqli_query($db, "SELECT * FROM `authors` ORDER BY `id` DESC");
 	while ($note = mysqli_fetch_array($list))
 		print '<a href="authors/?i='.$note['id'].'"><div>'.$note['nam'].' '.$note['fam'].'</div></a>';
 ?>
