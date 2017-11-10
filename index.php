@@ -30,9 +30,9 @@ if ($item)
 	while ($note = mysqli_fetch_array($list))
 		{
 		if (strlen($note['nam']))
-			print '<a href="releases/?i='.$note['id'].'"><div>'.$note['nam'].'</div></a>';
+			print '<a href="releases/'.$note['id'].'pdf"><div>'.$note['nam'].'</div></a>';
 		else
-			print '<a href="releases/?i='.$note['id'].'"><div>Выпуск №'.$note['id'].' ('.$note['time'].')</div></a>';
+			print '<a href="releases/'.$note['id'].'.pdf"><div>Выпуск №'.$note['id'].' ('.$note['time'].')</div></a>';
 		}
 ?>
 	</div><div>Авторы
