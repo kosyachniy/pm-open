@@ -19,23 +19,41 @@ if ($item)
 	{
 	start('Главная PM-Open','','');
 	$start=($page-1)*10;
-	$list=mysqli_query($db,"SELECT * FROM `note` ORDER BY `id` DESC LIMIT '$start',10");
-	while($note=mysqli_fetch_array($list))
+	//$list=mysqli_query($db,"SELECT * FROM `note` ORDER BY `id` DESC LIMIT '$start',10");
+	//while($note=mysqli_fetch_array($list))
 ?>
 <div class="c3">
 <div class="c9"><div><center><div class="c1">
 	<div>Выпуски
-		<div>123</div>
+<?php
+	$list = mysqli_query($db, "SELECT * FROM `releases` ORDER BY `id` DESC");
+	while ($note = mysqli_fetch_array($list))
+		{
+		if (strlen($note['nam']))
+			print '<div>'.$note['nam'].'</div>';
+		else
+			print '<div>Выпуск №'.$note['id'].' ('.$note['time'].')</div>';
+		}
+?>
 	</div><div>Авторы
-		<div>123</div>
+<?php
+	$list = mysqli_query($db, "SELECT * FROM `auth` ORDER BY `id` DESC");
+	while ($note = mysqli_fetch_array($list))
+		print '<div>'.$note['nam'].' '.$note['fam'].'</div>';
+?>
 	</div><div>Темы
-		<div>123</div>
+<?php
+	$list = mysqli_query($db, "SELECT * FROM `theme` ORDER BY `id` DESC");
+	while ($note = mysqli_fetch_array($list))
+		print '<div>'.$note['nam'].'</div>';
+?>
 	</div><div>Года
-		<div>123</div>
+		<div>Раздел в разработке</div>
 	</div><div>Праздники
-		<div>123</div>
+		<div>Раздел в разработке</div>
 	</div>
 </div>
+<!--
 <div class="c7">
 	<div class="c8">
 		<form action="/sys/search.php" method="post"><input placeholder="Поиск" name="search"></form>
@@ -43,6 +61,7 @@ if ($item)
 		<div>Расширенный поиск</div>
 	</div><div style="display: none;" class="c4">
 </div></div>
+!-->
 </center></div></div>
 <?php
 $list=mysqli_query($db,"SELECT * FROM `note` WHERE `rating`>=50 ORDER BY `id` DESC LIMIT 4");
@@ -55,7 +74,7 @@ while($note=mysqli_fetch_array($list))
 $c=mysqli_query($db,"SELECT * FROM `note` WHERE `rating`<50 ORDER BY `id` DESC LIMIT 6");
 while($d=mysqli_fetch_array($c))
 	{
-	print '<a href="?i='.$d['id'].'"><div style="background-image: url(load/img/'.$d['id'].'.jpg);"><div><table><tr><td>'.$d['nam'].'<br>'.$d['tags'].'</td><td class="c6">&nbsp;'.$d['rating'].'</td></tr></table></div></div></a>';
+	print '<a href="?i='.$d['id'].'"><div style="background-image: url(load/img/'.$d['id'].'.jpg);"><div><table><tr><td width="90%">'.$d['nam'].'<br>'.$d['tags'].'</td><td width="10%" class="c6">&nbsp;'.$d['rating'].'</td></tr></table></div></div></a>';
 	}
 print'</div>';
 	}

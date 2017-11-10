@@ -5,3 +5,5 @@
 [Закрытая группа](https://vk.com/pm_openprivate)
 
 [Открытая группа](https://vk.com/pm_open)
+
+[Печать](http://online.gmprint.ru/calc/journals?min)
