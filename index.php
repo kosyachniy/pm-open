@@ -11,13 +11,13 @@ if ($item)
 	$list=mysqli_query($db,"SELECT * FROM `note` WHERE `id`='$item'");
 	while($note=mysqli_fetch_array($list))
 		{
-		start($note['nam'].' - PM-Open','?i='.$item,'');
+		start($note['nam'].' - Source', '?i='.$item, 'Газета {Source} СПбГУ');
 		print '<center><h1>'.$note['nam'].'</h1></center><img src="load/img/'.$note['id'].'.jpg"><br><br><div class="column">'.nl2br($note['cont']).'</div>';
 		}
 	}
   else
 	{
-	start('Главная PM-Open','','');
+	start('Газета {Source}', '', 'Официальный сайт газеты факультета ПМ-ПУ СПБГУ');
 	$start=($page-1)*10;
 	//$list=mysqli_query($db,"SELECT * FROM `note` ORDER BY `id` DESC LIMIT '$start',10");
 	//while($note=mysqli_fetch_array($list))
@@ -47,9 +47,9 @@ if ($item)
 	while ($note = mysqli_fetch_array($list))
 		print '<a href="themes/?i='.$note['id'].'"><div>'.$note['nam'].'</div></a>';
 ?>
-	</div><div>Года
+	</div><div id="del">Года
 		<a><div>Раздел в разработке</div></a>
-	</div><div>Праздники
+	</div><div id="del">Праздники
 		<a><div>Раздел в разработке</div></a>
 	</div>
 </div>

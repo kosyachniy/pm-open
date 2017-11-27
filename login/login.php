@@ -20,14 +20,14 @@ while($row=mysqli_fetch_array($res))
     setcookie('user', $log, time()+31536000);
     setcookie('password', $pas, time()+31536000);
     $str=$_SESSION['inp'];
-    header("location: $str");
+    header("location: ".$str);
     act(9, 'Вошёл');
     }
 
 if ($f==0)
     {
     $_SESSION['ban']++;
-    action(9, 'Запретили вход');
+    act(9, 'Запретили вход');
     if ($_SESSION['ban']>=50) //Ограничение в количестве регистраций и попыток подбора пароля
       header("location: http://yandex.ru/");
      else

@@ -13,9 +13,11 @@
     <script src="/sys/main.js"></script>
   </head>
   <body>
-	<script type='text/javascript'>
-	if(window.innerWidth<=600)
-	    location.href='/m/'<?=$href?>;
-	</script>
 		<center><div class="a1">
-<!-- #$d=rand(1,mb_strstr(scandir($_SERVER['DOCUMENT_ROOT'].'/sys/bck/', 1)[0],'.',true)); !-->
+<!--
+  <script type='text/javascript'>
+  if(window.innerWidth<=600)
+      location.href='/m/'<?=$href?>;
+  </script>
+#$d=rand(1,mb_strstr(scandir($_SERVER['DOCUMENT_ROOT'].'/sys/bck/', 1)[0],'.',true));
+!-->

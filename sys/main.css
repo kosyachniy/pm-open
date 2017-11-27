@@ -23,7 +23,7 @@ textarea:focus, input:focus {outline: none;}
 .a2 {background: #000; /*background: rgba(0, 0, 0, 0.6); background: #138808;*/ width: 100%; height: 65px; position: fixed; left: 0; top: 0; font-size: 20px; z-index: 90;}
 .a2, .a2 div, .a2 a { color: #fff;}
 .a3 {width: 50%; height: 65px;}
-.a3 a:first-child {margin-left: 20px;}
+.a3 a:first-child {margin: 0 20px 0 20px;}
 .a3 img {height: 100%;}
 .a3 div {width: 22%; height: 43px; padding-top: 22px; text-align: center;}
 .a3 div:hover {background: #fff; color: #000; /*background: rgba(0, 0, 0, 0.6); background-color: #0000c2;*/}
@@ -40,7 +40,7 @@ textarea:focus, input:focus {outline: none;}
 .a7 p {padding: 8px 10px 5px 15px;}
 .a1 > img {width: 96%; margin: 0 2% 0 2%;}
 
-/*
+/**/
 .column {
   -webkit-columns: 200px 3;
   -moz-columns: 200px 3;
@@ -53,7 +53,7 @@ textarea:focus, input:focus {outline: none;}
   column-rule: 1px solid #ccc;
   text-align: justify;
 }
-*/
+/**/
 
 .b1 > div {width: 49%; display: inline-block;}
 .b1 div div {width: 100%; text-align: center; padding: 30px 0 20px 0; font-size: 25px;}
@@ -110,3 +110,11 @@ input[type="file"] {border: 0;}
 .c5 a div div {margin: 150px 0 0 0; padding: 10px 1vw 10px 1vw; width: 26vw; height: 63px;}
 .c6 {color: #3cc051; font-size: 40px;}
 .c9 {margin-bottom: 34px;}
+
+@media only screen and (max-device-width: 600px)
+	{
+	#del {display: none;}
+	.a3 {width: 73%;}
+	.a4 {width: 23%; text-align: center;}
+	.c1 div {width: 33%;}
+	}
