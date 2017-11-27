@@ -29,10 +29,10 @@ if ($item)
 	$list = mysqli_query($db, "SELECT * FROM `releases` ORDER BY `id` DESC");
 	while ($note = mysqli_fetch_array($list))
 		{
-		if (strlen($note['nam']))
-			print '<a href="releases/'.$note['id'].'pdf"><div>'.$note['nam'].'</div></a>';
-		else
-			print '<a href="releases/'.$note['id'].'.pdf"><div>Выпуск №'.$note['id'].' ('.$note['time'].')</div></a>';
+		$nam = 'releases/'.$note['id'].'.pdf';
+		if (!file_exists($nam)) $nam = 'releases/'.$note['id'].'.djvu';
+
+		print '<a href="'.$nam.'"><div>'.(strlen($note['nam']) ? $note['nam'] : $note['id'].' ('.$note['time'].')').'</div></a>';
 		}
 ?>
 	</div><div>Авторы
