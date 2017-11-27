@@ -4,8 +4,8 @@ session_start();
 
 function db($a='')
   {
-  $db=mysqli_connect('localhost','root','','pm'.$a);
-  //$db=mysqli_connect('mysql.hostinger.ru','u696001181_k','asdrqwerty09','u696001181_k');
+  //$db=mysqli_connect('localhost','root','','pm'.$a);
+  $db=mysqli_connect('mysql.hostinger.ru','u920044506_k','asdrqwerty09','u920044506_k');
   if (mysqli_connect_errno()) print 'Ошибка 1. '.mysqli_connect_errno();
   mysqli_query($db,'SET names "utf8"');
   return $db;

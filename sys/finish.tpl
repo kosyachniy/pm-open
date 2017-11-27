@@ -1,7 +1,7 @@
 </div></center>
 		<div class="a2">
 			<div class="a3">
-			<a href="/"><img src="/sys/logo3.png"></a>
+			<a href="/"><img src="/sys/logo.png"></a>
 			<a href="/"><div>Читать</div></a>
 			<a href="/write"><div>Написать</div></a>
 			<a href="/about/"><div>О нас</div></a>
