@@ -71,7 +71,7 @@ input[type="file"] {border: 0;}
 
 .c9 {width: 100%;}
 .c9 > div {width: 90vw;}
-.c1, .c7 {width: 100%; border: 1px solid; border-radius: 15px; font-size: 20px; margin: 20px 0 0 0;}
+.c1, .c7 {width: 100%; border: 1px solid; border-radius: 15px; font-size: 20px;}
 .c1 {height: 40px; position: relative; z-index: 10;}
 .c1 div {padding: 10px 0 10px 0; width: 20%;} /*.c1 > div {height: 20px;}*/
 /*.c1 > div:hover {border: 1px solid #000;}*/
@@ -96,10 +96,10 @@ input[type="file"] {border: 0;}
 .c4 form {width: 100%;}
 .c4 input[type="submit"] {margin: 20px 0 20px 0; width: 100%;}
 .c4 hr {border: 0; border-top: 1px solid #000; width: 100%;}
-.c3 {width: 100%;}
-.c10 {width: 50%; height: 300px;}
+.c3 {width: 100%; padding: 20px 0 0 0;}
+.c10 {width: 50%; height: 22vw;}
 .c10 div, .c5 a div div {width: 100%; background: rgba(0, 0, 0, 0.6); color: #fff;}
-.c10 div {padding: 130px 0 0 0; height: 170px; font-size: 40px; text-align: center;}
+.c10 div {padding: 9.5vw 0 0 0; height: 12.5vw; font-size: 3vw; text-align: center;}
 .c10, .c5 a div {background: no-repeat;
     -moz-background-size: 100%;
     -webkit-background-size: 100%;
@@ -107,8 +107,8 @@ input[type="file"] {border: 0;}
     background-size: 100%;}
 .c5 {width: 100%;}
 .c5 a > div {width: 28vw; margin: 20px 1vw 0 1vw;}
-.c5 a div div {margin: 150px 0 0 0; padding: 10px 1vw 10px 1vw; width: 26vw; height: 63px;}
-.c6 {color: #3cc051; font-size: 40px;}
+.c5 a div div {margin: 8.5vw 0 0 0; padding: 10px 1vw 10px 1vw; width: 26vw; height: 6vw; font-size: 1.5vw;}
+.c6 {color: #3cc051; font-size: 4vw;}
 .c9 {margin-bottom: 34px;}
 
 @media only screen and (max-device-width: 600px)

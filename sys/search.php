@@ -19,6 +19,6 @@ while($d=mysqli_fetch_array($res))
   }
 print'</div>';
 
-finish();
+include('finish.tpl');
 act($search,15);
 ?>
