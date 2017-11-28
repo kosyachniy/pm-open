@@ -57,7 +57,7 @@ if ($f==true)
 		$_SESSION['fio']=$nam.' '.$sur;
     	$db=db();
     	mysqli_query($db,"INSERT INTO `user` (nam, fam, log, pas, mail, admin) VALUES ('$nam', '$sur', '$log', '$pas', '$log', 10);") or die(header("location: ./?error=9"));
-		header("location: ../cabinet");
+		header("location: ../");
 		mail ($log, 'Вы успешно зарегистрировались на сайте {Source}', 'Ваш логин: '.$log.'
 Ваш пароль: '.$pas.' 
 Благодарим вас за регистрацию на официальном сайте ПМ-ПУ СМИ', 'Вы успешно зарегистрировались на сайте {Source}');

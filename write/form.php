@@ -1,5 +1,5 @@
 <?php
-include ('../sys/func.php');
+include('../sys/func.php');
 
 $nam=$_POST['nam'];
 $cat=$_POST['cat'];
@@ -8,8 +8,10 @@ $user=$_POST['user'];
 
 $time=date('d.m.Y H:i:s');
 
-mail ('polozhev@mail.ru', 'Новая статья в предложке!', $user.' ('.$time.')
+$text = $user.' ('.$time.')
 '.$cat.' / '.$nam.'
-'.$cont);
+'.$cont;
+act($text, 2);
+mail('polozhev@mail.ru', 'Новая статья в предложке!', $text);
 header("location: ../");
 ?>

@@ -14,11 +14,11 @@ while($d=mysqli_fetch_array($res))
   if (stripos(' '.mb_strtolower($d['nam'], 'UTF-8'), $search) || stripos(' '.mb_strtolower($d['cont'], 'UTF-8'), $search) || stripos(' '.mb_strtolower($d['tags'], 'UTF-8'), $search) || $d['id']==$search)
     {
     $l=$l+1;
-    print '<a href="?i='.$d['id'].'"><div style="background-image: url(../load/img/'.$d['id'].'.jpg);"><div><table><tr><td>'.$d['nam'].'<br>'.$d['tags'].'</td><td class="c6">&nbsp;'.$d['rating'].'</td></tr></table></div></div></a>';
+    print '<a href="../?i='.$d['id'].'"><div style="background-image: url(../load/img/'.$d['id'].'.jpg);"><div><table><tr><td>'.$d['nam'].'<br>'.$d['tags'].'</td><td class="c6">&nbsp;'.$d['rating'].'</td></tr></table></div></div></a>';
     }
   }
 print'</div>';
 
 include('finish.tpl');
-act($search,15);
+act($search, 15);
 ?>
